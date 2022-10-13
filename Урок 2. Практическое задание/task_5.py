@@ -15,3 +15,13 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+init_lst = [7, 5, 3, 3, 2]
+print(f"Текущий рейтинг: {init_lst}")
+for i in init_lst:
+    new_el = int(input("Введите новый элемент рейтинга: "))
+    if new_el > 0:
+        init_lst.append(new_el)
+        init_lst.sort(reverse=True)
+        print(f"Новый рейтинг: {init_lst}")
+else:
+    print("Ошибка. Вы ввели не натуральное число")
