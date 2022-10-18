@@ -17,3 +17,17 @@ Process finished with exit code 0
 
 Process finished with exit code 0
 """
+
+
+# Функция деления двух чисел
+def dev(x, y):
+    # Проверка деления на 0
+    try:
+        return x/y
+    except ZeroDivisionError:
+        print(f"Деление на 0.")
+
+
+# Приглашение для ввода чисел
+print(dev(int(input("Введите первое число: ")),
+          int(input("Введите второе число: "))))
