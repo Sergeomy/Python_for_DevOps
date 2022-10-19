@@ -7,3 +7,20 @@
 
 Реализуйте вариант без и с генераторным выражением
 """
+
+
+init_lst = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+
+# Вариант без генератора выражений
+res_lst = []
+for i in range(1, len(init_lst)):
+    if init_lst[i] > init_lst[i - 1]:
+        res_lst.append(init_lst[i])
+
+print(res_lst)
+
+# Вариант с генератором выражений
+res_lst_gen = [init_lst[i] for i in range(
+    1, len(init_lst)) if init_lst[i] > init_lst[i - 1]]
+
+print(res_lst_gen)

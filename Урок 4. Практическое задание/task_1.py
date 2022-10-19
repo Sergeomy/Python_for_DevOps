@@ -6,3 +6,23 @@
 Для выполнения расчета для конкретных значений
 необходимо запускать скрипт с параметрами.
 """
+
+# Вводные данные:
+# Выработка в часах: 25
+# Ставка в час: 100
+# Премия: 200
+
+# Импорт параметров
+from sys import argv
+
+script_name, hours, cost_per_hour, addition = argv
+
+# Печать вводных параметров
+print("Имя скрипта: ", script_name)
+print("Выработка в часах: ", hours)
+print("Ставка в час: ", cost_per_hour)
+print("Премия: ", addition)
+
+# Расчёт ЗП и вывод результата
+tot = (float(hours) * float(cost_per_hour)) + float(addition)
+print(f"Зарплата сотрудника: {tot}")
