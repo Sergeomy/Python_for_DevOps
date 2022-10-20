@@ -20,7 +20,12 @@ for i in range(1, len(init_lst)):
 print(res_lst)
 
 # Вариант с генератором выражений
-res_lst_gen = [init_lst[i] for i in range(
-    1, len(init_lst)) if init_lst[i] > init_lst[i - 1]]
+res_lst_gen = (init_lst[i] for i in range(1, len(init_lst))
+               if init_lst[i] > init_lst[i - 1])
 
-print(res_lst_gen)
+print(type(res_lst_gen))
+
+out_lst = []
+for a in res_lst_gen:
+    out_lst.append(a)
+print(out_lst)
