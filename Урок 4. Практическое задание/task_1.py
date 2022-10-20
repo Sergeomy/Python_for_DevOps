@@ -24,5 +24,5 @@ print("Ставка в час: ", cost_per_hour)
 print("Премия: ", addition)
 
 # Расчёт ЗП и вывод результата
-tot = (float(hours) * float(cost_per_hour)) + float(addition)
+tot = float(hours) * float(cost_per_hour) + float(addition)
 print(f"Зарплата сотрудника: {tot}")
