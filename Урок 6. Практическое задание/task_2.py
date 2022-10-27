@@ -16,3 +16,26 @@ length (длина в метрах), width (ширина в метрах).
 
 Например: 20м*5000м*25кг*0.05м = 125000 кг = 125 т
 """
+
+
+# Определяем класс
+class Road:
+    # Задаём атрибуты
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
+        self.weight = 25
+        self.height = 0.05
+
+    # Метод для вычисления массы
+    def asph_mass(self):
+        asph_mass_kg = self._length * self._width * self.weight * self.height
+        asph_mass_t = asph_mass_kg / 1000
+        print(f"Для покрытия всего дорожного полотна (5000 м х 20 м) неободимо"
+              f" {round(asph_mass_kg)} кг ({round(asph_mass_t)} "
+              f"тонн) асфальта.")
+
+
+# Передаём значения
+rd = Road(5000, 20)
+rd.asph_mass()
