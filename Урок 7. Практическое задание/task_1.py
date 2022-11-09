@@ -46,7 +46,6 @@ class Matrix:
                 self.my_list[i][j] = self.my_list[i][j] + other.my_list[i][j]
         return Matrix.__str__(self)
 
-
 m = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 add_m = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-print(m.__add__(add_m))
+print(m + add_m)
