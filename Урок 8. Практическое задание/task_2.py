@@ -10,19 +10,24 @@
 """
 
 
-class ZeroDiv:
-    def __init__(self, number, denominator):
-        self.number = number
-        self.denominator = denominator
-
-    @staticmethod
-    def div_by_zero(number, denominator):
-        try:
-            return number / denominator
-        except ZeroDivisionError:
-            return f"Деление на ноль."
+class DivZero(Exception):
+    def __init__(self, txt):
+        self.txt = txt
 
 
-div = ZeroDiv(10, 100)
-print(div.div_by_zero(10, 1))
-print(div.div_by_zero(100, 0))
+def div():
+    try:
+        nmb_1 = int(input("Что делить: "))
+        nmb_2 = int(input("На что делить: "))
+        if nmb_2 == 0:
+            raise DivZero("Вы пытаетесь разделить на ноль.")
+        else:
+            answ = nmb_1 / nmb_2
+            return answ
+    except ValueError:
+        print("Вы ввели не число")
+    except DivZero as err:
+        return err
+
+
+print(div())
